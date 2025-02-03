@@ -1,26 +1,17 @@
 import "antd/dist/reset.css"; // Import Ant Design CSS
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import "./App.css";
-import Navbar from "../../Components/Navbar";
-import Home from "../Home";
-import Services from "../Services";
-import AboutUs from "../AboutUs";
-import ForBusiness from "../ForBusiness";
-import NotFound from "../NotFound";
+import { AppMenu } from "../../Components/AppMenu";
+import { AppRoutes } from "../../Components/AppRoutes";
+import { menuItems, routes } from "./config";
 
 const App = () => {
   return (
     <Router>
-      <Navbar />
+      <AppMenu items={menuItems} />
       <div style={{ padding: "20px" }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/for-business" element={<ForBusiness />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <AppRoutes routes={routes} />
       </div>
     </Router>
   );
