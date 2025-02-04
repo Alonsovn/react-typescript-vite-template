@@ -11,7 +11,10 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://Alonsovn.github.io/react-typescript-vite-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alonsovn/react-typescript-vite-template"
+  },
   "dependencies": {
     "@ant-design/icons": "^5.6.0",
     "@reduxjs/toolkit": "^2.5.0",
