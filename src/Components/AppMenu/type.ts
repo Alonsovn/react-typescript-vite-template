@@ -1,5 +1,3 @@
-import { SwitchChangeEventHandler } from "antd/es/switch";
-
 export type MenuItem = {
   key: string;
   icon: React.ReactNode;
