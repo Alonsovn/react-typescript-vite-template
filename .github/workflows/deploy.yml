@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main  # Deploy whenever you push to main
+      - main # Deploy whenever you push to main
 
 permissions:
   contents: write
@@ -15,6 +15,11 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+
+      - name: Set Git User Identity
+        run: |
+          git config --global user.name "Alonso VN"
+          git config --global user.email "alonsonh94@gmail.com"
 
       - name: Install Node.js
         uses: actions/setup-node@v3
