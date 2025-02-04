@@ -7,16 +7,19 @@ import {
   AlignLeftOutlined,
   AlignRightOutlined,
   HomeOutlined,
+  UserOutlined,
 } from "@ant-design/icons";
 import NotFound from "../NotFound";
 import { RouteItem } from "../../Components/AppRoutes/type";
 import { MenuItem } from "../../Components/AppMenu/type";
+import { UserAccount } from "../UserAccount";
 
 export const routes: RouteItem[] = [
   { path: "/", element: <Home /> },
   { path: "services", element: <Services /> },
   { path: "about-us", element: <AboutUs /> },
   { path: "for-business", element: <ForBusiness /> },
+  { path: "user-account", element: <UserAccount /> },
   { path: "*", element: <NotFound /> },
 ];
 
@@ -29,7 +32,7 @@ export const menuItems: MenuItem[] = [
   {
     key: "services",
     icon: <AlignLeftOutlined />,
-    label: "Sevices",
+    label: "Services",
   },
   {
     key: "about-us",
@@ -40,5 +43,10 @@ export const menuItems: MenuItem[] = [
     key: "for-business",
     icon: <AlignRightOutlined />,
     label: "For Business",
+  },
+  {
+    key: "user-account",
+    icon: <UserOutlined />,
+    label: "User Account",
   },
 ];
