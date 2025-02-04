@@ -1,3 +1,5 @@
+import { SwitchChangeEventHandler } from "antd/es/switch";
+
 export type MenuItem = {
   key: string;
   icon: React.ReactNode;
@@ -6,4 +8,6 @@ export type MenuItem = {
 
 export type MenuItemsProps = {
   items: MenuItem[];
+  isDarkMode: boolean;
+  onThemeToggle: (checked: boolean) => void;
 };
