@@ -2,7 +2,7 @@ import { Alert, Spin } from "antd";
 import { useGetUsersDataQuery } from "../../Redux/Api/api";
 
 const UserAccount: React.FC = () => {
-  const { data: users, isLoading, error } = useGetUsersDataQuery();
+  const { data: users, isLoading, error } = useGetUsersDataQuery({});
   console.log("users", users);
 
   if (isLoading) return <Spin />;
