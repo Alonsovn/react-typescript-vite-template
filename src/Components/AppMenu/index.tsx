@@ -1,7 +1,9 @@
-import { Menu, Switch } from "antd";
+import { Dropdown, Menu, Switch } from "antd";
 import { MenuProps } from "antd";
 import { useNavigate } from "react-router-dom";
 import "./appmenu.css";
+import { UserOutlined } from "@ant-design/icons";
+import { UserAccountMenu } from "../UserAccountMenu";
 
 export type MenuItem = {
   key: string;
@@ -10,15 +12,13 @@ export type MenuItem = {
 };
 
 export type MenuItemsProps = {
-  leftMenuItems: MenuItem[];
-  rightMenuItems: MenuItem[];
+  items: MenuItem[];
   isDarkMode: boolean;
   onThemeToggle: (checked: boolean) => void;
 };
 
 const AppMenu: React.FC<MenuItemsProps> = ({
-  leftMenuItems,
-  rightMenuItems,
+  items,
   isDarkMode,
   onThemeToggle,
 }) => {
@@ -32,7 +32,7 @@ const AppMenu: React.FC<MenuItemsProps> = ({
     <>
       <Menu
         mode="horizontal"
-        items={leftMenuItems}
+        items={items}
         onClick={handleMenuItemClick}
         style={{
           flex: 1,
@@ -45,8 +45,6 @@ const AppMenu: React.FC<MenuItemsProps> = ({
 
       <Menu
         mode="horizontal"
-        items={rightMenuItems}
-        onClick={handleMenuItemClick}
         style={{
           flex: 1,
           background: "transparent",
@@ -54,7 +52,11 @@ const AppMenu: React.FC<MenuItemsProps> = ({
           justifyContent: "flex-end",
           fontWeight: 500,
         }}
-      />
+      >
+        <Menu.Item key="account" icon={<UserOutlined />}>
+          <UserAccountMenu />
+        </Menu.Item>
+      </Menu>
       <Switch
         checkedChildren="🌙 Dark"
         unCheckedChildren="🌞 Light"
