@@ -1,7 +1,7 @@
 import "antd/dist/reset.css"; // Import Ant Design CSS
 import { BrowserRouter as Router } from "react-router-dom";
 
-import "./App.css";
+import "./app.css";
 import { AppMenu } from "../../Components/AppMenu";
 import { AppRoutes } from "../../Components/AppRoutes";
 import { menuItems, routes } from "./config";

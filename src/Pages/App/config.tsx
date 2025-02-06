@@ -10,9 +10,9 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import NotFound from "../NotFound";
-import { RouteItem } from "../../Components/AppRoutes/type";
-import { MenuItem } from "../../Components/AppMenu/type";
 import { UserAccount } from "../UserAccount";
+import { RouteItem } from "../../Components/AppRoutes";
+import { MenuItem } from "../../Components/AppMenu";
 
 export const routes: RouteItem[] = [
   { path: "/", element: <Home /> },

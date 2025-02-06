@@ -13,9 +13,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Alonsovn/react-typescript-vite-template"
+    "url": "https://github.com/Alonsovn/react-typescript-vite-template.git"
   },
-  "homepage": "https://alonsovn.github.io/react-typescript-vite-template/",
   "dependencies": {
     "@ant-design/icons": "^5.6.0",
     "@reduxjs/toolkit": "^2.5.0",

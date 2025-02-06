@@ -1,7 +1,19 @@
 import { Menu, Switch } from "antd";
 import { MenuProps } from "antd";
 import { useNavigate } from "react-router-dom";
-import { MenuItemsProps } from "./type";
+import "./appmenu.css";
+
+export type MenuItem = {
+  key: string;
+  icon: React.ReactNode;
+  label: string;
+};
+
+export type MenuItemsProps = {
+  items: MenuItem[];
+  isDarkMode: boolean;
+  onThemeToggle: (checked: boolean) => void;
+};
 
 const AppMenu: React.FC<MenuItemsProps> = ({
   items,

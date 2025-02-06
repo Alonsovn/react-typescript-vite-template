@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { backendServiceApi } from "./Api/api";
+import { backendServiceApi } from "./api";
 import { userSlice } from "./Slices/userSlice";
 import { setupListeners } from "@reduxjs/toolkit/query";
 
