@@ -23,7 +23,7 @@ export const routes: RouteItem[] = [
   { path: "*", element: <NotFound /> },
 ];
 
-export const menuItems: MenuItem[] = [
+export const leftmenuItems: MenuItem[] = [
   {
     key: "home",
     icon: <HomeOutlined />,
@@ -44,6 +44,9 @@ export const menuItems: MenuItem[] = [
     icon: <AlignRightOutlined />,
     label: "For Business",
   },
+];
+
+export const rightmenuItems: MenuItem[] = [
   {
     key: "user-account",
     icon: <UserOutlined />,

@@ -10,13 +10,15 @@ export type MenuItem = {
 };
 
 export type MenuItemsProps = {
-  items: MenuItem[];
+  leftMenuItems: MenuItem[];
+  rightMenuItems: MenuItem[];
   isDarkMode: boolean;
   onThemeToggle: (checked: boolean) => void;
 };
 
 const AppMenu: React.FC<MenuItemsProps> = ({
-  items,
+  leftMenuItems,
+  rightMenuItems,
   isDarkMode,
   onThemeToggle,
 }) => {
@@ -30,16 +32,29 @@ const AppMenu: React.FC<MenuItemsProps> = ({
     <>
       <Menu
         mode="horizontal"
-        items={items}
+        items={leftMenuItems}
         onClick={handleMenuItemClick}
         style={{
           flex: 1,
           background: "transparent",
           borderBottom: "none",
+          justifyContent: "flex-start",
           fontWeight: 500,
         }}
       />
 
+      <Menu
+        mode="horizontal"
+        items={rightMenuItems}
+        onClick={handleMenuItemClick}
+        style={{
+          flex: 1,
+          background: "transparent",
+          borderBottom: "none",
+          justifyContent: "flex-end",
+          fontWeight: 500,
+        }}
+      />
       <Switch
         checkedChildren="🌙 Dark"
         unCheckedChildren="🌞 Light"
