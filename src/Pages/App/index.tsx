@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./app.css";
 import { AppMenu } from "../../Components/AppMenu";
 import { AppRoutes } from "../../Components/AppRoutes";
-import { leftmenuItems, rightmenuItems, routes } from "./config";
+import { items, routes } from "./config";
 import { ConfigProvider, Layout, theme, Typography } from "antd";
 import { useState } from "react";
 import Paragraph from "antd/es/typography/Paragraph";
@@ -36,8 +36,7 @@ const App = () => {
             }}
           >
             <AppMenu
-              leftMenuItems={leftmenuItems}
-              rightMenuItems={rightmenuItems}
+              items={items}
               isDarkMode={isDarkMode}
               onThemeToggle={handleToggleTheme}
             />
